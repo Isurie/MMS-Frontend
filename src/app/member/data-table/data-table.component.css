@@ -1,0 +1,13 @@
+.full-width-table {
+  width: 100%;
+}
+
+.data-table{
+  width: 80%;
+  margin: 20px auto;
+}
+
+.table1{
+  padding-left: 100px;
+  padding-right: 1px;
+}

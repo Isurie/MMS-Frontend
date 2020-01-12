@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+      <div class="col rs8 offset-2">
+        
+        <form>
+          <img [src]="imageUrl" style="float:right;width:250px;height:200px">
+          <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+          <button type="submit" class="btn-large btn-submit">Submit</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>

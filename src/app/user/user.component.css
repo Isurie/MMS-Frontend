@@ -1,0 +1,21 @@
+.pad{
+   
+        padding-left: 200px;
+        padding-right: 75px;
+        padding-top: 75px;
+        padding-bottom: 100px;
+    }
+.ccc{
+    color: darkgoldenrod
+}
+.suhadini{
+    background-image: url('/assets/img/a4-1238603_1280.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height:100%;
+
+}

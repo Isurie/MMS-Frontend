@@ -1,0 +1,29 @@
+<admin-nav></admin-nav>
+<div class="feedback">
+  <h3>Member Feedbacks</h3>
+<mat-card class="example-card">
+  <mat-card-content>
+    <table class="table table-hover">
+      
+      <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Subject</th>
+        <th></th>
+      </thead>
+      
+      <tbody>
+        <tr *ngFor="let feedback of feedbackArray">
+          <td (click)="onEdit(patient)">{{ feedback.firstName }}</td>
+          <td (click)="onEdit(patient)">{{ feedback.lastName }}</td>
+          <td (click)="onEdit(patient)">{{ feedback.email }}</td>
+          <td (click)="onEdit(patient)">{{ feedback.subject }}</td>
+        </tr>
+      </tbody>
+     
+    </table>
+  </mat-card-content>
+</mat-card>
+<angular2csv [data]="feedbackArray" filename="Report" [options]="options"></angular2csv>
+</div>

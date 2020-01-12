@@ -1,0 +1,57 @@
+
+  <div class="member-dt">
+    
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+
+ 
+ <div class="mat-elevation-z8 data-table" >
+  <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+
+    <ng-container matColumnDef="fname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name</th>
+      <td mat-cell *matCellDef="let member">{{member.fname}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="lname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</th>
+      <td mat-cell *matCellDef="let member">{{member.lname}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Gender</th>
+      <td mat-cell *matCellDef="let member">{{member.gender}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+      <td mat-cell *matCellDef="let member">{{member.email}}</td>
+    </ng-container>
+
+     <ng-container matColumnDef="telephone">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Contact No:</th>
+      <td mat-cell *matCellDef="let member">{{member.telephone}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+      <td mat-cell *matCellDef="let member"><button mat-raised-button color="warn" class="btn btn-success" (click)="onClickdelete(member.id)">Delete</button></td>
+    </ng-container>
+   
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource.data.length"
+      [pageIndex]="0"
+      [pageSize]="5"
+      [pageSizeOptions]="[5, 10, 100, 250]">
+  </mat-paginator>
+</div> 
+<!-- <angular2csv [data]="members
+" filename="Member_Report" [options]="options"></angular2csv> -->
+
+</div>

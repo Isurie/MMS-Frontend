@@ -1,0 +1,102 @@
+<div class="bg-img-3">
+<div class="container">
+  
+    <div class="example-form">
+    <form #f="ngForm" (ngSubmit)="submit(f.value)">
+  
+      <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Give us a Feedback</h2>
+  
+      <div class="form-group">
+        <mat-form-field class="example-full-width">
+        <input  matInput placeholder="Your Firstname Here" required
+                ngModel
+                name="firstName"
+                type="text" 
+                #firstName="ngModel"
+                minlength="3"
+                >
+                <mat-error *ngIf="firstName.touched && !firstName.valid">
+                    <mat-error *ngIf="firstName.errors.required">
+                        First name is <strong>required!</strong>
+                    </mat-error>
+                    <mat-error *ngIf="firstName.errors.minlength">
+                        First name should be minimum {{firstName.errors.minlength.requiredLength}} charactors!
+                    </mat-error>
+                </mat-error>
+       
+      </mat-form-field>
+      </div>  
+        
+      <div class="form-group">
+        <mat-form-field class="example-full-width">
+            <input  matInput placeholder="Your Lastname Here" required
+                    ngModel
+                    name="lastName"
+                    type="text" 
+                    #lastName="ngModel"
+                    minlength="3"
+                    >
+                    <mat-error *ngIf="lastName.touched && !lastName.valid">
+                        <mat-error *ngIf="lastName.errors.required">
+                            Last name is <strong>required!</strong>
+                        </mat-error>
+                        <mat-error *ngIf="lastName.errors.minlength">
+                            Last name should be minimum {{lastName.errors.minlength.requiredLength}} charactors!
+                        </mat-error>
+                    </mat-error>
+          </mat-form-field>
+      </div>
+        
+      <div class="form-group">
+
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="Your Email Here" required 
+                ngModel
+                name="email" 
+                type="text" 
+                #email="ngModel"
+                pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
+                >
+                <mat-error *ngIf="email.touched && !email.valid">
+                    <mat-error *ngIf="email.errors.required">
+                        Email is <strong>required!</strong>
+                    </mat-error>
+                    <mat-error *ngIf="email.errors.pattern">
+                        Invalid Email
+                    </mat-error>
+                </mat-error>
+       
+          </mat-form-field>
+      </div>
+  
+      <div class="form-group">
+          <mat-form-field class="example-full-width">
+              <mat-select placeholder="Your Country" [(ngModel)]="selectedValue" name="country">
+                <mat-option *ngFor="let country of countries" [value]="country.name">
+                  {{country.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+           
+      </div>
+  
+      <div class="form-group">
+        <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Write Your Feedback.." required
+              ngModel
+              name="subject"
+              #subject="ngModel"
+          ></textarea>
+          <mat-error *ngIf="subject.touched && !subject.valid">
+              Subject is <strong>required!</strong>
+              
+          </mat-error>
+       
+          </mat-form-field>
+      </div>
+      <button mat-raised-button color="accent" [disabled]="!f.valid">Submit</button>
+  
+    </form>
+    </div>
+    </div>
+  </div> 

@@ -1,0 +1,22 @@
+.full-width-table {
+    width: 100%;
+  }
+  th{
+    font-size: 15px;
+  }
+  .btn {
+    border-radius: 10px;
+  }
+
+.member-dt{
+  width: 100%;
+  padding-left: 250px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.form-group{
+  padding-left: 300px;
+}
+
+

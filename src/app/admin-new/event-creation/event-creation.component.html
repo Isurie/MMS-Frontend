@@ -1,0 +1,91 @@
+<div style="text-align:center">
+  <admin-nav></admin-nav>
+</div>
+<div class="adm">
+  <div class="search-box">
+    <div style="width: 500px;">
+      <form (ngSubmit)="ondateSubmit(date)">
+        <div class="form-group">
+          <h4 style="text-align:center">Search Event</h4>
+          <label for="eventname">Date </label>
+          <input matInput placeholder="Date" type="date" class="form-control" id="date" required [(ngModel)]="date" name="date" placeholder="Date">
+          <div>
+            <div class="btn-group">
+              <button mat-raised-button color="primary" type="submit" class="btn btn-success" (click)="ondateSubmit(date)">Search</button>
+            </div>
+            <ul>
+              <li *ngFor="let event of events">
+                <br>
+                <span>
+                  <i>{{event.eventname}}</i>
+                </span>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+
+  <div class="container">
+    <div class="col-md-6">
+      <form (ngSubmit)="onSubmit()">
+        <br />
+        <br />
+        <div class="form-group">
+          <h4 style="text-align:center">Create Event</h4>
+          <label for="eventname">
+            <b>Event Name</b>
+          </label>
+          <input type="text" [(ngModel)]="event.eventname" name="eventname" class="form-control" id="eventname" />
+        </div>
+
+        <div class="form-group">
+          <label for="venue">
+            <b>Venue</b>
+          </label>
+          <input type="text" [(ngModel)]="event.venue" name="venue" class="form-control" id="venue" />
+        </div>
+
+        <div class="form-group">
+          <label for="date">
+            <b>Date</b>
+          </label>
+          <input type="date" [(ngModel)]="event.date" name="date" class="form-control" id="date" [min]="minDate" />
+        </div>
+
+        <div class="form-group">
+          <label for="starttime">
+            <b>Start Time</b>
+          </label>
+          <input type="time" [(ngModel)]="event.starttime" name="starttime" class="form-control" id="starttime" />
+        </div>
+        <div class="form-group">
+          <label for="endtime">
+            <b>End Time</b>
+          </label>
+          <input type="time" [(ngModel)]="event.endtime" name="endtime" class="form-control" id="endtime" />
+        </div>
+
+        <div class="form-group">
+          <label for="eventfee">
+            <b>Event Fee</b>
+          </label>
+          <input type="number" [(ngModel)]="event.eventfee" name="eventfee" class="form-control" id="eventfee" />
+        </div>
+
+
+        <button mat-raised-button color="primary" class="btn btn-success">SUBMIT</button>
+        <br>
+        <br>
+
+
+      </form>
+
+    </div>
+  </div>
+</div>

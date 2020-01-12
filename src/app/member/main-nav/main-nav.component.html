@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)"
+  >
+    <div class="propic">
+        <button mat-raised-button color="accent" type="button"(click)="featuredInput1.click()">Change</button><br>
+        
+          <img src={{url}} alt="..."  style="width:150px;height:150px;" class="img-thumbnail">
+        
+        <input #featuredInput1 style="display: none;" type="file" value="upload" id="fileButton" (change)="onFileSelected($event)" />
+      </div>
+    <mat-nav-list>
+
+    <a mat-list-item routerLink="/memberdetails">Member Profile</a>
+    <a mat-list-item routerLink="/updateprof">Update Details</a>
+    <a mat-list-item routerLink="/eventdetails">Event Details</a>
+    <a mat-list-item routerLink="/todolist">To Do list</a>
+    
+  </mat-nav-list>
+</mat-sidenav>
+<mat-sidenav-content>
+  
+  <router-outlet></router-outlet>
+  
+</mat-sidenav-content>
+</mat-sidenav-container>

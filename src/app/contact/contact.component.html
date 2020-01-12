@@ -1,0 +1,83 @@
+
+<section id="contact" class="contact-form section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Contact Us</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-6 col-xs-12">
+        <h3 class="title-head text-left">Get in touch</h3>
+        <form #f="ngForm" (ngSubmit)="submit(f.value)" class="contact-form" data-toggle="validator">
+          <div class="row">
+            
+            <div class="col-lg-4 col-md-12 col-xs-12">
+              <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <input type="text" ngModel name="name" #name="ngModel" class="form-control" id="name" placeholder="Full Name" required data-error="Please enter your name">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-12 col-xs-12">
+              <div class="form-group">
+                <i class="contact-icon fa fa-envelope-o"></i>
+                <input type="email" ngModel name="email" #email="ngModel" class="form-control" id="email" placeholder="Email" required data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-12 col-xs-12">
+              <div class="form-group">
+                <i class="contact-icon fa fa-pencil-square-o"></i>
+                <input type="text" ngModel name="subject" #subject="ngModel" class="form-control" id="subject" placeholder="Subject" required data-error="Please enter your Subject">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+           
+            <div class="col-lg-12 col-md-12 col-xs-12">
+              <textarea class="form-control" ngModel name="message" #message="ngModel" id="message" rows="4" placeholder="Message" required data-error="Please enter your message"></textarea>
+              <div class="help-block with-errors"></div>
+              
+              <button type="submit" id="form-submit" class="btn btn-common btn-form-submit">Send Message</button>
+              
+              <div id="msgSubmit" class="h3 text-center hidden"></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-xs-12">
+        <h4 class="contact-info-title text-left">Contact Information</h4>
+        <div class="contact-info">
+          <address>
+          <i class="lni-map-marker icons cyan-color contact-info-icon"></i>
+          SMHouse, University of Moratuwa
+        </address>
+          <div class="tel-info">
+            <a href="tel:0778571280"><i class="lni-mobile icons cyan-color contact-info-icon"></i>77 857 1280</a>
+            <a href="tel:0779364013"><i class="lni-phone icons cyan-color contact-info-icon"></i>77 936 4013</a>
+          </div>
+          <a href="mailto:imranmdm1995@gmail.com"><i class="lni-envelope icons cyan-color contact-info-icon"></i>imranmdm1995@gmail.com</a>
+          
+          <ul class="social-links">
+            <li>
+              <a href="#" class="fa fa-facebook"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-twitter"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-instagram"></a>
+            </li>
+            <li>
+              <a href="#" class="fa fa-linkedin"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

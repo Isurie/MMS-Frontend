@@ -1,0 +1,126 @@
+<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="icon-menu"></span>
+        <span class="icon-menu"></span>
+        <span class="icon-menu"></span>
+      </button>
+      <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+    </div>
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">
+            <i class="fa fa-home" aria-hidden="true"></i>Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/feedback" routerLinkActive="active">
+            <i class="fa fa-commenting" aria-hidden="true"></i>Feedback
+          </a>
+        </li>
+        
+
+        <li>
+          <a class="nav-link" routerLink="/chatapp" routerLinkActive="active">
+            <i class="fa fa-phone" aria-hidden="true"></i>Chat
+          </a>
+        </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">
+            <i class="fa fa-phone" aria-hidden="true"></i>Contact
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!auth.isLoggednIn()" routerLink="/register" routerLinkActive="active">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>Register
+          </a>
+        </li>
+
+        <li *ngIf="authority === 'user'" class="nav-item">
+          <a class="nav-link" routerLink="user">User Board</a>
+        </li>
+  
+        <li *ngIf="authority === 'admin'" class="nav-item">
+          <a class="nav-link" routerLink="admin">Admin Board</a>
+        </li>
+  
+        <li *ngIf="authority === 'pm'" class="nav-item">
+          <a class="nav-link" routerLink="pm">PM Board</a>
+        </li>
+  
+        <li *ngIf="!authority" class="nav-item">
+          <a class="nav-link" *ngIf="!auth.isLoggednIn()" routerLink="auth/login">
+            <i class="fa fa-fw fa-user"></i>Login
+          </a>
+        </li>
+        <li class="nava">
+          <div *ngIf="info.token">
+            <strong class="una"><i class="fa fa-user-circle" aria-hidden="true"></i>{{info.username}}</strong>
+          </div>
+        </li>
+        <li class="bnava">
+          <div *ngIf="info.token; else loggedOut">
+                <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+          </div>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+  
+
+  
+  <ul class="mobile-menu navbar-nav">
+    <li>
+      <a class="page-scroll" routerLink="/about" routerLinkActive="active">
+        Home
+      </a>
+    </li>
+    <li>
+      <a class="page-scroll" routerLink="/events" routerLinkActive="active">
+        Pricing
+      </a>
+    </li>
+    <li>
+      <a class="page-scroll" routerLink="/feedback" routerLinkActive="active">
+        Feedback
+      </a>
+    </li>
+    <li>
+      <a class="page-scroll" routerLink="/register" routerLinkActive="active">
+        Register
+      </a>
+    </li>
+    <li>
+      <a class="page-scroll" routerLink="/login" routerLinkActive="active">
+        Login
+      </a>
+    </li>
+    <li>
+      <a class="page-scroll" routerLink="/features" routerLinkActive="active">
+        Features
+      </a>
+    </li>
+    <li>
+      <a class="page-scroll" routerLink="/team" routerLinkActive="active">
+        Team
+      </a>
+    </li>
+    <li>
+      <a class="page-scroll" routerLink="/contact" routerLinkActive="active">
+        Contact
+      </a>
+    </li>
+    
+  </ul>
+  
+
+</nav>
+

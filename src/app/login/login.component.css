@@ -1,0 +1,31 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    padding-left: 75px;
+    padding-top: 75px;
+    padding-bottom: 30px;
+  }
+
+  .example-full-width {
+    width: 100% !important;
+  }
+  .lin{
+    
+    padding-top: 150px;
+    padding-bottom: 250px;
+
+    background-image: url('/assets/img/laptop-1209008_1280.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height:100%;
+  }
+  h1{
+    color: darkmagenta;
+  }
+  
+  

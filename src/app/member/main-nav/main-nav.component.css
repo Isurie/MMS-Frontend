@@ -1,0 +1,39 @@
+.sidenav-container {
+  height: 100%;
+  padding-top: 70px;
+  background-color: rgb(226, 226, 247);
+}
+
+.sidenav {
+  background-color: rgb(134, 211, 241);
+  width: 200px;
+  padding-top: 70px;
+}
+
+.sidenav .mat-toolbar {
+  height: 100px;
+  background-color: rgb(49, 177, 160);
+}
+
+.mat-toolbar.mat-primary {
+  height: 50%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+img {
+  border-radius: 50%;
+  border: none;
+  border-width: thin;
+  position: relative, right;
+}
+.propic{
+  padding-left: 10px;
+
+}
+.button{
+  color: black;
+}
+
+
+

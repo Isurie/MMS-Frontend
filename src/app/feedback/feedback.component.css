@@ -1,0 +1,21 @@
+ 
+.container {
+  border-radius: 5px;
+  width: 50%;
+} 
+
+.form-control.ng-touched.ng-invalid{
+  border: 2px solid red;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  padding-left: 75px;
+  padding-top: 75px;
+  padding-bottom: 30px;
+}
+
+.example-full-width {
+  width: 100% !important;
+}

@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="col-md-6">
+    <form>
+      <br />
+      <br />
+      <br>
+      <div class="form-group">
+        <label>
+          <h4>MEMBER DETAILS</h4>
+        </label>
+        <br>
+        <br>
+      </div>
+      <ul>
+        <li>
+          <b>Name</b> : {{member.fname}} {{member.lname}} </li>
+        <li>
+          <b>Gender</b> : {{member.gender}}</li>
+        <li>
+          <b>Birthday</b> : {{member.birthday}}</li>
+        <li>
+          <b>Address</b> : {{member.address}}</li>
+        <li>
+          <b>Email</b> : {{member.email}}</li>
+        <li>
+          <b>Contact No.</b> : {{member.telephone}}</li>
+
+      </ul>
+
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <button mat-raised-button color="primary" class="btn btn-success" (click)="print(member.id)" [mat-dialog-close]="true">Print</button>
+
+    </form>
+  </div>
+</div>

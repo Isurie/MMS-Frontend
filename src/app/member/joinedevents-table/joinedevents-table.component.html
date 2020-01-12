@@ -1,0 +1,43 @@
+
+<div class="dtable">
+  <div class="mat-elevation-z8 data-table" >
+    <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+
+      <ng-container matColumnDef="eventid">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Event Id</th>
+        <td mat-cell *matCellDef="let row">{{row.eventid}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="eventname">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Event Name</th>
+        <td mat-cell *matCellDef="let row">{{row.eventname}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="venue">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Venue</th>
+        <td mat-cell *matCellDef="let row">{{row.venue}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+        <td mat-cell *matCellDef="let row">{{row.date}}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="eventrating">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Rate the Event</th>
+        <td mat-cell *matCellDef="let row"><app-rating ></app-rating></td>
+        </ng-container>
+  
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator #paginator
+        [length]="dataSource.data.length"
+        [pageIndex]="0"
+        [pageSize]="50"
+        [pageSizeOptions]="[25, 50, 100, 250]">
+    </mat-paginator>
+  </div>
+  </div>

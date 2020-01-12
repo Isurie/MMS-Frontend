@@ -1,0 +1,146 @@
+<div *ngIf="isSignedUp; else signupForm" class="regsuccess">
+  <h1>Your registration is successful. Please login!</h1>
+</div>
+<ng-template #signupForm>
+  <div class="bg-img-2">
+  <div class="example-form">
+      <h3>Signup now!</h3> 
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      
+      <div class="form-group">
+        <!-- <label for="fname">Your first name</label> -->
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="Your first name" type="text" name="fname" [(ngModel)]="form.fname" #fname="ngModel" required />
+        <mat-error *ngIf="f.submitted && fname.invalid">
+            <mat-error *ngIf="fname.errors.required">
+              First name is <strong>required</strong>
+            </mat-error>
+            
+            <!-- <div *ngIf="f.submitted && fname.invalid">
+          <div *ngIf="fname.errors.required">First name is required</div>
+        </div> -->
+      </mat-error>
+      </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="lname">Your last name</label> -->
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="Your last name" name="lname" [(ngModel)]="form.lname" #lname="ngModel" required />
+          <mat-error *ngIf="f.submitted && lname.invalid">
+            <mat-error *ngIf="lname.errors.required">
+              Last name is <strong>required</strong>
+            </mat-error>
+            <!-- <div *ngIf="f.submitted && lname.invalid">
+              <div *ngIf="lname.errors.required">Last name is required</div>
+            </div> -->
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+      <section class="example-section">
+        <label for="gender" class="example-margin">Gender: </label>
+        <mat-radio-group id="gender"  name="gender" [(ngModel)]="form.gender" #gender="ngModel" required >
+          <mat-radio-button class="example-margin" value="male">Male</mat-radio-button>
+          <mat-radio-button class="example-margin" value="female">Female</mat-radio-button>
+        </mat-radio-group>
+        <mat-error *ngIf="f.submitted && gender.invalid">
+          <mat-error *ngIf="gender.errors.required">
+            Gender is <strong>required</strong>
+          </mat-error>
+          <!-- <div *ngIf="f.submitted && lname.invalid">
+            <div *ngIf="lname.errors.required">Last name is required</div>
+          </div> -->
+        </mat-error>
+      </section>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput [matDatepicker]="picker" placeholder="Pick your birthday" id="birthday"  name="birthday" [(ngModel)]="form.birthday" #birthday="ngModel" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> 
+      </div>
+
+      <div class="form-group">
+          <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Address" name="address" [(ngModel)]="form.address" #address="ngModel" required></textarea>
+          </mat-form-field>
+      </div>
+
+      <div class="form-group">
+          <mat-form-field class="example-full-width">
+              <input type="number" matInput placeholder="Contact number" name="telephone"
+              minlength=10
+              maxlength=10
+              
+              [(ngModel)]="form.telephone" #telephone="ngModel" required>
+              <mat-icon matSuffix>mode_edit</mat-icon>
+              <mat-error *ngIf="f.submitted && telephone.invalid">
+                <mat-error *ngIf="telephone.errors.required">
+                  Contact number is <strong>required</strong>
+                </mat-error>
+              </mat-error>
+            </mat-form-field>
+      </div>
+
+      <div class="form-group">
+          <mat-form-field class="example-full-width">
+        <!-- <label for="username">Username</label> -->
+        <input matInput placeholder="Username" type="text" name="username" [(ngModel)]="form.username" #username="ngModel"
+          required />
+        <!-- <div *ngIf="f.submitted && username.invalid">
+          <div *ngIf="username.errors.required">Username is required</div>
+        </div> -->
+        <mat-error *ngIf="f.submitted && username.invalid">
+            <mat-error *ngIf="username.errors.required">
+              Username is <strong>required</strong>
+            </mat-error>
+          </mat-error>
+      </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="email">Email</label> -->
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="Your email" type="text" name="email" [(ngModel)]="form.email" #email="ngModel" required email />
+        <mat-error *ngIf="f.submitted && email.invalid">
+            <mat-error *ngIf="email.errors.required">Email is required</mat-error>
+            <mat-error *ngIf="email.errors.email">Email must be a valid email address</mat-error>
+        </mat-error>
+        <!-- <div *ngIf="f.submitted && email.invalid">
+          <div *ngIf="email.errors.required">Email is required</div>
+          <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div> -->
+      </mat-form-field>
+      </div>
+
+      <div class="form-group"> 
+          <mat-form-field class="example-full-width">
+        <!-- <label for="password">Password</label> -->
+        <input matInput placeholder="Your password" type="password" name="password" [(ngModel)]="form.password" #password="ngModel"
+          required minlength="6" />
+          <mat-error *ngIf="f.submitted && password.invalid">
+              <mat-error *ngIf="password.errors.required">Password is required</mat-error>
+              <mat-error *ngIf="password.errors.minlength">Password must be at least 6 characters</mat-error>
+          </mat-error>
+            <!-- <div *ngIf="f.submitted && password.invalid">
+              <div *ngIf="password.errors.required">Password is required</div>
+              <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+            </div> -->
+      </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <button mat-raised-button color="accent">Register</button>
+        <div *ngIf="f.submitted && isSignUpFailed" class="alert alert-warning">
+          Signup failed!<br/>{{errorMessage}}
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+</ng-template>

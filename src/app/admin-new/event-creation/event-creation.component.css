@@ -1,0 +1,16 @@
+
+.formdesign{
+    background-color: rgba(116, 150, 224, 0.815);
+}
+
+.body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: rgb(18, 18, 19);
+    background-color: #1e8da5;
+}
+.adm{
+    padding-top: 40px;
+    padding-left: 240px;
+} 

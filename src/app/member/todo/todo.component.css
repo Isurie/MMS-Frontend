@@ -1,0 +1,19 @@
+.row{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.fa fa-plus-circle{
+    color: whitesmoke;
+}
+.input-group{
+    background-color: white;
+    width: 100%;
+}
+.example-full-width {
+    padding: 0 75px;
+    width: 60%;
+
+  }
+.input-group-addon{
+    padding: 10px 0;
+}

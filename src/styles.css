@@ -1,0 +1,106 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+#main-navbar a{
+    color: #b60690 !important;
+}
+/* You can add global styles to this file, and also import other style files */
+#main-navbar a.active{
+    color: #38b606 !important;
+}
+ /* Navbar container */
+ /* .navbar-drp, .navbar{
+    overflow: hidden;
+    background-color: rgb(238, 227, 227);
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+ .navbar a:hover {
+    background-color:rgb(255, 145, 0);
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+   
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px 5px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+  .version-info {
+    font-size: 8pt;
+    float: right;
+  }
+  
+  .bg-img{
+    background-image: url('/assets/img/modern-white-office-desk-table-with-laptop-cup-of-coffee-and-supplies_33795-1.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height:100%;
+  }
+  .bg-img-2{
+    background-image: url('/assets/img/photo-1518655048521-f130df041f66.jpeg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height:100%;
+  }
+  .bg-img-3{
+    background-image: url('/assets/img/wallpaper-2996686.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height:100%;
+  }
+  .bg-img-4{
+    background-image: url('/assets/img/beautiful-scenery-wallpaper.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height:100%;
+  }
+
+  .hover-cursor{
+    cursor: pointer;
+}
+.bg-chat-img{
+  background-image: url('/assets/img/DSC100332149.jpg') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height:100%;
+}
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

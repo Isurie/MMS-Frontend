@@ -1,0 +1,31 @@
+<admin-nav></admin-nav>
+<div class="updprof">
+  <div class="head ">
+    <h3>Requested Membership Reports</h3>
+  </div>
+
+
+  <mat-card class="example-card">
+    <mat-card-content>
+      <table class="table table-hover">
+        <div class="hed">
+          <thead>
+            <th>Member Id</th>
+          </thead>
+        </div>
+        <tbody>
+          <tr *ngFor="let Reportrequest of reportrequest">
+            <td>{{ Reportrequest.memberid }}</td>
+            <td>
+              <button mat-raised-button color="primary" type="button" class="btn btn-primary" (click)="openDialog(Reportrequest.memberid)">
+                View
+              </button>
+            </td>
+
+          </tr>
+        </tbody>
+
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

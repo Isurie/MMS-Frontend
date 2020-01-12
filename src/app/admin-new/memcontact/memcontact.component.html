@@ -1,0 +1,62 @@
+<admin-nav></admin-nav>
+<div class="contacts">
+<mat-card class="example-card">
+  <mat-card-content>
+    <table class="table table-hover">
+      <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Subject</th>
+        <th>Message</th>
+        <th></th>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let contact of memcontactArray">
+          <td (click)="onEdit(patient)">{{ contact.name }}</td>
+          <td (click)="onEdit(patient)">{{ contact.email }}</td>
+          <td (click)="onEdit(patient)">{{ contact.subject }}</td>
+          <td (click)="onEdit(patient)">{{ contact.message }}</td>
+          <td>
+           
+            <button mat-raised-button color="primary" type="button" class="btn btn-primary" (click)="myfunc(contact.email)" data-toggle="modal" data-target="#basicExampleModal">
+             Reply
+            </button>
+
+
+            <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reply</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form (ngSubmit)="onSubmit(email1,contact.email)" #email1="ngForm">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Enter your reply</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Description" name="description"
+                          ngModel>
+                      </div>
+
+                      <button mat-raised-button color="accent" type="submit" class="btn btn-primary">Submit</button>
+                      <button mat-raised-button color="accent" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </mat-card-content>
+</mat-card>
+</div>

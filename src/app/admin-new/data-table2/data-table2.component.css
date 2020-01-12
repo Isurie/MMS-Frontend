@@ -1,0 +1,18 @@
+.full-width-table {
+    width: 100%;
+  }
+  
+  .data-table{
+    width: 80%;
+    margin: 20px auto;
+  }
+  .btn1{
+    border-color:rgb(228,72,103);
+
+  }
+  .updprof{
+    padding-left: 120px;
+  }
+  .filter{
+    padding-left: 120px;
+  }

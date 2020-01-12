@@ -1,0 +1,18 @@
+th{
+  padding-left: 60px;
+}
+
+ .full-width-table {
+  width: 100%;
+}
+.data-table{
+  width: 100%;
+  margin:  auto;
+  padding-left: 100px;
+} 
+.feedback{
+  padding-left: 300px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
